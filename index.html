@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Goal-Conditioned Predictive Coding for Offline Reinforcement Learning (NeurIPS 2023 Poster)">
+  <meta property="og:title" content="Goal-Conditioned Predictive Coding for Offline Reinforcement Learning"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:url" content="https://brown-palm.github.io/GCPC"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="https://brown-palm.github.io/GCPC/static/images/banner.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Goal-Conditioned Predictive Coding for Offline Reinforcement Learning">
+  <meta name="twitter:description" content="">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="https://brown-palm.github.io/GCPC/static/images/banner.png">
+  <meta name="twitter:card" content="">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="offline RL, sequence modeling, sequential decision making, predictive coding, GCRL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Goal-Conditioned Predictive Coding for Offline Reinforcement Learning</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Goal-Conditioned Predictive Coding for Offline Reinforcement Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://zilaiz.github.io" target="_blank">Zilai Zeng</a>,</span>
+                <span class="author-block">
+                  <a href="https://ceezh.github.io/" target="_blank">Ce Zhang</a>,</span>
+                  <span class="author-block">
+                    <a href="https://wang-sj16.github.io/" target="_blank">Shijie Wang</a>,</span>
+                    <span class="author-block">
+                        <a href="https://chensun.me/" target="_blank">Chen Sun</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Brown University<br>NeurIPS 2023</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                  <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                    <a href="https://arxiv.org/abs/2307.03406" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+    
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/brown-palm/GCPC" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent work has demonstrated the effectiveness of formulating decision making as supervised learning on offline-collected trajectories. Powerful sequence models, such as GPT or BERT, are often employed to encode the trajectories. However, the benefits of performing sequence modeling on trajectory data remain unclear. In this work, we investigate whether sequence modeling has the ability to condense trajectories into useful representations that enhance policy learning. We adopt a two-stage framework that first leverages sequence models to encode trajectory-level and optionally goal-conditioned representations, and then learns a policy which may take the encoded representations as its input. This formulation allows us to consider many existing supervised offline RL methods as specific instances of our framework. Within this framework, we introduce Goal-Conditioned Predicitve Coding (GCPC), a sequence modeling objective that yields powerful trajectory representations and leads to performant policies. Through extensive empirical evaluations on AntMaze, FrankaKitchen and Locomotion environments, we observe that sequence modeling can have a significant impact on challenging decision making tasks. Furthermore, we demonstrate that GCPC learns a goal-conditioned latent representation encoding the future trajectory, which enables competitive performance on all three benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Method: Goal Conditioned Predictive Coding-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="content">
+      <h2 class="title">Goal-Conditioned Predictive Coding</h2>
+      <p>We introduce a two-stage framework that decouples the trajectory representation learning and policy learning. Under this framework, we derive a specific design that performs goal-conditioned future prediction and generates latent representations encode future behaviors toward the desired goal.</p>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/gcpc.gif" alt="Two-Stage GCPC" height="100%"/>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Method -->
+
+
+<!-- TRL objectives-->
+<section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title">What Brings Helpful Trajectory Representations?</h2>
+        <p>
+        The two-stage framework offers flexibility on the choice of representation learning objectives, and allows us to study the impact of sequence modeling for trajectory representation learning and policy learning independently. We further explore how to properly utilize sequence modeling to generate helpful trajectory representations from the following aspects:
+        </p>
+        <br>
+        <p>
+          <b><em>Masking Patterns:</em></b> To study the impact of trajectory representation learning objectives on the resulting policy performance, we implement five different sequence modeling objectives by varying masking patterns in the first stage pretraining. We observe that predicitve coding objectives yields powerful trajectory representations about the future trajectory, which enhance the policy learning.
+        </p>
+        <img src="static/images/masking_patterns.png", alt="masking_patterns">
+        <br>
+        <p>
+          <b><em>Goal Conditioning:</em></b> We investigate whether goal conditioning (i.e. the goal input) in TrajNet is necessary or beneficial for learning trajectory representations. Goal conditioning is crucial for predictive coding objectives to properly encode expected long-term future.
+        </p>
+        <br>
+        <img src="static/images/goal_cond_antmaze.png", alt="goal conditioning">
+        <br>
+        <p>
+          <b><em>Comparison with Explicit Future:</em></b> In GCPC, the future trajectory information is stored in the goal-conditioned latent representation and serves as a conditioning variable of the policy. We compare the latent future representation with explicit future sequence to study how the form of future would impact policy performance. We observe that the latent representation is a powerful future information carrier that can effectively improve the policy performance.
+        </p>
+    </div>
+  </div>
+</section>
+  <!--End TRL objectives -->
+
+  <!-- Effectiveness-->
+
+  <!-- End Effectiveness-->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title">Acknowledgements</h2>
+      <p>
+        We appreciate all anonymous reviewers for their constructive feedback. We would like to thank Calvin Luo and Haotian Fu for their discussions and insights, and Tian Yun for the help on this project. This work is in part supported by Adobe, Honda Research Institute, Meta AI, Samsung Advanced Institute of Technology, and a Richard B. Salomon Faculty Research Award for C.S.
+      </p>
+</div>
+</div>
+</section>
+<!--End Effectiveness -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{zeng2023gcpc,
+  title={Goal-Conditioned Predictive Coding for Offline Reinforcement Learning},
+  author={Zeng, Zilai and Zhang, Ce and Wang, Shijie and Sun, Chen},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2023}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+</html>
