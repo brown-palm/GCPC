@@ -1,0 +1,21 @@
+_target_: 'gcpc.model.policynet.PolicyNet'
+env_name: ???
+obs_dim: ???
+action_dim: ???
+goal_dim: ???
+ctx_size: ???
+future_horizon: ???
+epochs: ???
+lr: ???
+seed: ???
+eval_last_k: ???
+num_eval_rollouts: ???
+goal_type: ???
+stage: 'pl'  # policy learning
+model_config:
+  tjn_ckpt_path: ???
+  mask_ratios: [0, 0.2, 0.4, 0.6, 0.8]
+  mask_ratio_weights: [0.8, 0.05, 0.05, 0.05, 0.05]
+  embed_dim: 1024
+  pdrop: 0
+

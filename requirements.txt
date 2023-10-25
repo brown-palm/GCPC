@@ -1,0 +1,10 @@
+torch==1.13.1
+pytorch-lightning==1.9.4
+matplotlib
+seaborn
+wandb
+hydra-core
+tensorboard
+protobuf==3.19.6
+cython==0.29.33
+git+https://github.com/Farama-Foundation/d4rl@master#egg=d4rl

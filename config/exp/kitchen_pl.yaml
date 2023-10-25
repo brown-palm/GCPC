@@ -1,0 +1,8 @@
+goal_dim: 30
+batch_size: 256
+lr: 1e-4
+ctx_size: 5
+future_horizon: 30
+epochs: 80
+use_scheduler: True
+num_eval_rollouts: 50
