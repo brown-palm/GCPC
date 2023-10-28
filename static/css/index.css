@@ -115,7 +115,7 @@ body {
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 70px;  /* can adjust to center images*/
   overflow: hidden;
   padding: 20px;
   font-size: 0;
