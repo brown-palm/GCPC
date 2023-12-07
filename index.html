@@ -143,7 +143,7 @@
 <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title">What Brings Helpful Trajectory Representations?</h2>
+        <h2 class="title">What Brings Effective Trajectory Representations?</h2>
         <p>
         The two-stage framework offers flexibility on the choice of representation learning objectives, and allows us to study the impact of sequence modeling for trajectory representation learning and policy learning independently. We further explore how to properly utilize sequence modeling to generate helpful trajectory representations from the following aspects:
         </p>
@@ -154,14 +154,15 @@
         <img src="static/images/masking_patterns.png", alt="masking_patterns">
         <br>
         <p>
-          <b><em>Goal Conditioning:</em></b> We investigate whether goal conditioning (i.e. the goal input) in TrajNet is necessary or beneficial for learning trajectory representations. Goal conditioning is crucial for predictive coding objectives to properly encode expected long-term future.
+          <b><em>Goal Conditioning:</em></b> We investigate whether goal conditioning (i.e. the input goal) in TrajNet is necessary or beneficial for learning trajectory representations. Goal conditioning is crucial for predictive coding objectives to properly encode expected long-term future.
         </p>
         <br>
         <img src="static/images/goal_cond_antmaze.png", alt="goal conditioning">
         <br>
         <p>
-          <b><em>Comparison with Explicit Future:</em></b> In GCPC, the future trajectory information is stored in the goal-conditioned latent representation, which serves as a conditioning variable of the policy. We compare the latent future representation with explicit future sequence to study how the form of future would impact policy performance. We observe that the latent representation is a powerful future information carrier that can effectively improve the policy performance.
+          <b><em>Comparison with Explicit Future:</em></b> In GCPC, the future trajectory information is stored in the goal-conditioned latent representation, which serves as a conditioning variable of the policy. We compare the latent future representation with the decoded explicit future sequence to study how the form of future information would impact policy performance. We observe that the latent representation is a powerful future information carrier that can effectively improve the policy performance.
         </p>
+        <img src="static/images/future_ablation.png", alt="future ablation", class="center">
     </div>
   </div>
 </section>
